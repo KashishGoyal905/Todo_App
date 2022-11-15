@@ -1,0 +1,6 @@
+1) create all the folders models, config, views, controllers, routes, assets, index.js
+2) do express things: download, require, port, call, listen.
+3) then created a file in the routes index and will use express router in that exported it and required it in the main file.
+4) then we created a file in home controller created a function exported it, required that file in routes and then used its function.
+5) ejs, set up 
+6) now setting up the database

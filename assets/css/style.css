@@ -1,0 +1,99 @@
+body {
+  background-color: grey;
+}
+
+.container {
+  background-color: white;
+  max-width: 50%;
+  /* max-height: 80%; */
+  margin: 0 auto;
+}
+
+#heading {
+  text-align: center;
+  padding-top: 20px;
+}
+
+label {
+  margin-left: 5%;
+}
+
+input {
+  min-width: 90%;
+  margin-left: 5%;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  border: none;
+}
+
+.category {
+  display: flex;
+  justify-content: space-between;
+  max-width: 99%;
+}
+
+.dropdown {
+  min-width: 50%;
+  margin-left: 2%;
+}
+
+.date {
+  min-width: 49%;
+  font-size: 20px;
+}
+
+#category1 {
+  margin-left: 110px;
+  margin-top: 12px;
+  font-size: 15px;
+}
+
+span {
+  font-size: 14px;
+  margin-left: 3%;
+}
+
+.task {
+  width: 120px;
+  height: 50px;
+  margin-left: 42%;
+  background-color: green;
+  color: white;
+  border: 1px solid white;
+}
+
+
+.tasks {
+  height: 350px;
+  width: 50%;
+  background-color: white;
+  margin: 0 auto;
+  overflow-y: scroll;
+position:relative;
+}
+
+/* card styling */
+.card {
+  max-width: 97%;
+  height: 55px;
+  background-color: white;
+  margin-left: 12px;
+}
+
+.remove{
+  position: absolute;
+  margin-left: 22%;
+  text-decoration: none;
+  color:red;
+  font-size: 20px;
+}
+
+
+.dept {
+  width: 60px;
+  height: 40px;
+  background-color: rgb(16, 75, 94);
+  color: rgb(255, 255, 255);
+  font-size:20px;
+  border:1px solid black;
+}

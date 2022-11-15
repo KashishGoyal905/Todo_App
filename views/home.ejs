@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="heading">Todo App</h1>
+        <hr>
+        <form action="/create-task" method="post">
+            <label for="Description">Description</label>
+            <br>
+            <input type="text" id="Description" name="Description" placeholder="What do you nedd to do?">
+            <hr>
+            <div class="category">
+                <div class="dropdown">
+                    <span>Category</span>
+                    <br>
+                    <label for="category1">Choose a category:</label>
+                    <select name="category1" id="category1">
+                        <option value="Personal">Personal</option>
+                        <option value="Work">Work</option>
+                        <option value="School">School</option>
+                        <option value="Cleaning">Cleaning</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div class="date">
+                    <span>Due Date</span>
+                    <br>
+                    <input type="date" name="dueDate">
+                </div>
+                <hr>
+            </div>
+            <div>
+                <hr>
+                <button class="task" type="submit">+ Add Task</button>
+                <hr>
+            </div>
+    </div>
+    </form>
+    <div class="tasks">
+        <%  %> 
+        <% for(let i of task_list) { %>
+            <div class="card">
+                <h2>
+                    <%=i.Description %>
+                        <span class="dept">
+                            <%=i.category1 %>
+                        </span>
+                        <a href="/delete-task/<%=i._id %>" class="remove">Delete</a>
+
+                </h2>
+                <%=i.dueDate %>
+
+                    <hr>
+            </div>
+            <% } %>
+    </div>
+</body>
+
+</html>
