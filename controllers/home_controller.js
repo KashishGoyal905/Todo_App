@@ -1,16 +1,16 @@
 const Schema = require('../models/task_schema');
 
 module.exports.home = function (req, res) {
-    Schema.find({}, function (err, schema) {
+    Schema.find({}, function (err, allTasks) {
         if (err) {
             console.log("error in finding the tasks");
             return;
         }
 
         return res.render('home', {
-            task_list: schema,
+            task_list: allTasks,
         })
-    })
+    });
 }
 
 module.exports.task = function (req, res) {
