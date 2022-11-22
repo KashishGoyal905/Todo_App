@@ -51,7 +51,7 @@ passport.deserializeUser(function (id, done) {
 
 });
 
-
+// function to check authentication
 passport.checkAuthentication = function (req, res, next) {
     if (req.isAuthenticated()) {
         return next();
@@ -60,6 +60,7 @@ passport.checkAuthentication = function (req, res, next) {
     return res.redirect('/users/sign-in');
 }
 
+// to set the user in local to aceess i the ejs file
 passport.setAuthenticatedUser = function (req, res, next) {
     if (req.isAuthenticated()) {
         res.locals.user = req.user;
